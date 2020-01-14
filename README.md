@@ -21,3 +21,4 @@
 * [Browsers & mobile devices for app-automate testing on BrowserStack](https://www.browserstack.com/list-of-browsers-and-platforms?product=app_automate)
 * [Using REST API to access information about your builds via the command-line interface](https://www.browserstack.com/app-automate/rest-api)
 * [Using Espresso with BrowserStack](https://www.browserstack.com/app-automate/espresso/get-started)
+# browserstack-espresso-gradleplugin

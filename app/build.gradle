@@ -1,18 +1,25 @@
 apply plugin: 'com.android.application'
-apply plugin: 'spoon'
+//apply plugin: 'spoon'
 apply plugin: 'jacoco'
+
 jacoco {
     toolVersion='0.7.5.201505241946'
 }
 buildscript {
     repositories {
         mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
 
     dependencies {
-        classpath 'com.stanfy.spoon:spoon-gradle-plugin:1.2.2'
+        //classpath 'com.stanfy.spoon:spoon-gradle-plugin:1.2.2'
+        classpath "gradle.plugin.com.browserstack.gradle:browserstack-gradle-plugin:2.3.0"
     }
 }
+
+apply plugin: "com.browserstack.gradle"
 
 android {
     compileSdkVersion 26
@@ -37,6 +44,20 @@ android {
     }
 }
 
+runDebugBuildOnBrowserstack {
+    username = "nithyamani3"
+    accessKey = "P4JKysg5WuchQxBfKQu1"
+    devices = ['Samsung Galaxy S8-7.0']
+}
+
+browserStackConfig {
+
+    username = "nithyamani3"
+    accessKey = "P4JKysg5WuchQxBfKQu1"
+    devices = ['Samsung Galaxy S8-7.0']
+
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
@@ -47,7 +68,9 @@ dependencies {
     androidTestImplementation 'com.squareup.spoon:spoon-client:1.7.1'
 }
 
+/*
 spoon {
     debug = true
     adbTimeout = 30
 }
+*/
