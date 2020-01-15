@@ -47,7 +47,7 @@ android {
 runDebugBuildOnBrowserstack {
     username = "nithyamani3"
     accessKey = "P4JKysg5WuchQxBfKQu1"
-    devices = ['Samsung Galaxy S8-7.0','Samsung Galaxy S7']
+    devices = ['Samsung Galaxy S8-7.0']
 }
 
 browserStackConfig {
